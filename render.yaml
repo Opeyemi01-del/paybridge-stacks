@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: paybridge-api
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node --loader tsx/esm src/index.ts
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: STACKS_NETWORK
+        value: testnet
+      - key: STACKS_API_URL
+        value: https://api.testnet.hiro.so
+      - key: NODE_ENV
+        value: production
+      - key: CONTRACT_ADDRESS
+        sync: false
+      - key: DEPLOYER_PRIVATE_KEY
+        sync: false
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: paybridge-redis
+          property: connectionString
+      - key: DATABASE_URL
+        fromDatabase:
+          name: paybridge-db
+          property: connectionString
+
+  - type: redis
+    name: paybridge-redis
+    plan: free
+    maxmemoryPolicy: noeviction
+
+databases:
+  - name: paybridge-db
+    plan: free

@@ -1,0 +1,25 @@
+{
+  "name": "paybridge-stacks",
+  "version": "0.1.0",
+  "description": "Bitcoin L2 payment gateway built on Stacks",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "clarinet check",
+    "console": "clarinet console",
+    "devnet": "clarinet devnet start"
+  },
+  "devDependencies": {
+    "@hirosystems/clarinet-sdk": "^2.11.0",
+    "@stacks/transactions": "^6.16.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "@types/swagger-ui-express": "^4.1.8",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.8.3"
+  }
+}

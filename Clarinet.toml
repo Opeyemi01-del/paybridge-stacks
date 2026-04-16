@@ -1,0 +1,39 @@
+[project]
+name = "paybridge-stacks"
+description = "Bitcoin L2 payment gateway on Stacks — Stacks Builder Rewards April 2026"
+authors = ["PayBridge Team"]
+telemetry = false
+cache_dir = "./.clarinet"
+
+# Boot contracts (loaded automatically in devnet/testnet)
+boot_contracts = []
+
+# ─── Contracts ──────────────────────────────────────────────────────────────
+
+[contracts.sip-010-trait]
+path = "contracts/traits/sip-010-trait.clar"
+clarity_version = 2
+epoch = "2.5"
+
+[contracts.mock-sbtc]
+path = "contracts/mock-sbtc.clar"
+clarity_version = 2
+epoch = "2.5"
+
+[contracts.payment-gateway]
+path = "contracts/payment-gateway.clar"
+clarity_version = 2
+epoch = "2.5"
+
+# ─── Repl Settings ──────────────────────────────────────────────────────────
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.settings]
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+# ─── Devnet / Testnet settings live in settings/Devnet.toml ─────────────────
+# See settings/Devnet.toml for wallet mnemonics and network config

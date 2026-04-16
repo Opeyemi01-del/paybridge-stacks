@@ -1,0 +1,5 @@
+[network]
+name = "mainnet"
+
+[accounts.deployer]
+mnemonic = "lesson couple tackle family occur miracle catch person drive surround choice rubber spice friend double coast dream what ethics leader reward party ketchup seek"

@@ -1,0 +1,18 @@
+[network]
+name = "simnet"
+
+[accounts.deployer]
+mnemonic = "lesson couple tackle family occur miracle catch person drive surround choice rubber spice friend double coast dream what ethics leader reward party ketchup seek"
+balance = 1_000_000_000_000
+
+[accounts.wallet_1]
+mnemonic = "beef alert ridge vacuum quote blind crisp interest genuine romance floor sort trap morning annual roof brick umbrella bid party screen adult figure sniff"
+balance = 100_000_000_000
+
+[accounts.wallet_2]
+mnemonic = "nerve skull cigar convince pole start ridge have humor kit exhibit ring please captain lunar draft civil swim design glare concert fiber comfort elephant"
+balance = 100_000_000_000
+
+[accounts.wallet_3]
+mnemonic = "jungle boat rebuild require grunt vibrant girl rather egg color cruise logic matter trouble beef caution job purity already dilemma reopen analyst develop search"
+balance = 100_000_000_000
