@@ -180,3 +180,4 @@ All logic is public, auditable, and runs on Bitcoin-secured Stacks.
 ## License
 
 MIT# paybridge-stacks
+# paybridge-stacks
